@@ -1,4 +1,6 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, abort, make_response, request
+NOT_FOUND = 'Not found'
+BAD_REQUEST = 'Bad request'
 
 app = Flask(__name__)
 
