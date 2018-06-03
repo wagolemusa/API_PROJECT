@@ -1,0 +1,40 @@
+FORTMAT: 1A
+
+HOST: https://www.theskaterdev.com
+
+# The Skater Dev's a Blog Posts
+
+This is the post API retrieving blog posts.
+
+# Group Posts
+## Posts Collection [/posts]
+
+
+### Get All Posts [GET /posts]
++ Response 200 (application/json)
+    + Attributes
+        - posts (array[Post])
+       
+
+### Get Individual Blog Post [Get /posts/{id}]
++ Parameter
+    + id: `1` - The ID of The  Post
+
++ Response 200 (application/json)
+    + Attributes
+        - Include Post
+        - comments (array[Comment])
+      
+
+# Data Structures
+
+## Post (object)
+- id: `1` (number) - The ID of the post
+- title `My awesome post` (string) - The Title of Posts
+- content: `This is real bussy`(string) - The content of the post
+
+
+## Commment (object)
+- id: `1` (number) - The ID of the comment
+- content: `This is cool` (string) - The Content of The Comment
+- author: `refuge` - Name of Post Author
